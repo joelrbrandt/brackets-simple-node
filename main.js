@@ -31,7 +31,8 @@ define(function (require, exports, module) {
 
     var AppInit        = brackets.getModule("utils/AppInit"),
         ProjectManager = brackets.getModule("project/ProjectManager"),
-        ExtensionUtils = brackets.getModule("utils/ExtensionUtils");
+        ExtensionUtils = brackets.getModule("utils/ExtensionUtils"),
+        NodeConnection = brackets.getModule("utils/NodeConnection");
 
     // Helper function that chains a series of promise-returning
     // functions together via their done callbacks.
@@ -50,7 +51,7 @@ define(function (require, exports, module) {
     AppInit.appReady(function () {
         // Create a new node connection. Requires the following extension:
         // https://github.com/joelrbrandt/brackets-node-client
-        var nodeConnection = new brackets.NodeConnection();
+        var nodeConnection = new NodeConnection();
         
         // Every step of communicating with node is asynchronous, and is
         // handled through jQuery promises. To make things simple, we
