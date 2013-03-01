@@ -71,7 +71,7 @@ define(function (require, exports, module) {
         
         // Helper function that loads our domain into the node server
         function loadSimpleDomain() {
-            var path = ExtensionUtils.getModulePath(module, "SimpleDomain");
+            var path = ExtensionUtils.getModulePath(module, "node/SimpleDomain");
             var loadPromise = nodeConnection.loadDomains([path], true);
             loadPromise.fail(function () {
                 console.log("[brackets-simple-node] failed to load domain");

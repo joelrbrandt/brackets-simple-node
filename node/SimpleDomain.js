@@ -55,7 +55,9 @@ maxerr: 50, node: true */
             false,          // this command is synchronous
             "Returns the total and free memory on the user's system in bytes",
             [],             // no parameters
-            [{name: "memory", type: "{total: number, free: number}"}]
+            [{name: "memory",
+                type: "{total: number, free: number}",
+                description: "amount of total and free memory in bytes"}]
         );
     }
     
